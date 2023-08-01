@@ -3,12 +3,121 @@
 :root {
     /* Fonte */
     --main-font: 'Montserrat', sans-serif;
+    /* Tamanhos */
+    --size-big: 32px;
+    --size-medium: 24px;
+    --size-standard: 16px;
+    --size-small: 14px;
     /* Cores */
     --black-green:#050805;
-    --dark-green: #111D13;
-    --mid-dark-green: #2B3B2C;
-    --mid-light-green: #415D43;
-    --light-green: #709775;
-    --very-light-green: #8FB996;
+    --very-dark-green: #0E1810;
+    --dark-green: #111D13 ;
+    --mid-dark-green: #263327;
+    --mid-light-green: #3d583f;
+    --light-green: #688d6d;
+    --very-light-green: #88af8f;
     --white-green: #E1F1E3;
 }
+
+body {
+    font-family: var(--main-font);
+    color: var(--white-green);
+    font-size: var(--size-standard);
+    background-color: var(--black-green);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+
+.page-title {
+    font-size: var(--size-big);
+}
+
+.main-content {
+    width: 80%;
+    height: 80%;
+    background-color: var(--very-dark-green);
+    border-radius: var(--size-small);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.controls {
+    width: 40%;
+    height: 90%;
+    background-color: var(--mid-dark-green);
+    border-radius: var(--size-small);
+}
+
+.buttons-box {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.button {
+    background-color: var(--dark-green);
+    border: 0;
+    padding: .5rem;
+    border-radius: .2rem;
+    color: var(--white-green);
+    font-family: var(--main-font);
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 3px 3px var(--very-dark-green);
+}
+
+.allatonce-box{
+    height: 90%;
+    width: 100%;
+    font-size: var(--size-medium);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.allatonce-input {
+    width: 60%;
+    height: 2rem;
+    color: var(--very-dark-green);
+    font-size: var(--size-medium);
+    background-color: var(--white-green);
+    border: 2px solid var(--very-dark-green);
+    border-radius: .3rem;
+}
+.allatonce-input:focus {
+   outline: 1px solid var(--light-green);
+}
+
+.box-container {
+    width: 50%;
+    height: 95%;
+    background-color: var(--dark-green);
+    border-radius: var(--size-small);
+    align-self: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mutable-box {
+    background-color: var(--mid-light-green);
+    width: 90%;
+    height: 90%;
+    border-radius: 0 0 0 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
