@@ -54,7 +54,7 @@ body {
     border-radius: var(--size-small);
 }
 
-.buttons-box {
+.buttons-section {
     height: 10%;
     width: 100%;
     display: flex;
@@ -74,7 +74,7 @@ body {
     box-shadow: 0 3px 3px var(--very-dark-green);
 }
 
-.allatonce-box{
+.allatonce-section{
     height: 90%;
     width: 100%;
     font-size: var(--size-medium);
@@ -99,6 +99,44 @@ body {
    outline: 1px solid var(--light-green);
 }
 
+.allatonce-box {
+    border-radius: 0;
+}
+
+.allatonce-button{
+    width: 20%;
+    height: 10%;
+    font-size: 1.2rem;
+}
+
+.individual-corners-section{
+    height: 90%;
+    width: 100%;
+    font-size: var(--size-medium);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.eliptical-corners-section {
+    height: 90%;
+    width: 100%;
+    font-size: var(--size-medium);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.allatonce-section, .individual-corners-section, .eliptical-corners-section {
+    display: none;
+} 
+
 .box-container {
     width: 50%;
     height: 95%;
@@ -112,12 +150,11 @@ body {
 
 .mutable-box {
     background-color: var(--mid-light-green);
-    width: 90%;
-    height: 90%;
-    border-radius: 0 0 0 0;
-    border-top-left-radius: 0;
+    width: 450px;
+    height: 450px;
+    /* border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0; */
 }
 

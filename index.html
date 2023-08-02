@@ -11,17 +11,28 @@
     <h1 class="page-title" id="page-title">Border-radius Previewer</h1>
     <main class="main-content" id="main-content">
         <section class="controls" id="controls">
-            <div class="buttons-box" id="buttons-box">
+            <div class="buttons-section" id="buttons-section">
                 <input type="button" value="All At Once" class="all-at-once button" id="all-at-once">
                 <label for="all-at-once" class="all-at-once_label"></label>
-                <input type="button" value="Individual Corners" class="individuals-corners button" id="individuals-corners">
-                <label for="individuals-corners" class="individuals-corners_label"></label>
+                <input type="button" value="Individual Corners" class="individual-corners button" id="individual-corners">
+                <label for="individual-corners" class="individual-corners_label"></label>
                 <input type="button" value="Eliptical Corners" class="eliptical-corners button" id="eliptical-corners">
                 <label for="eliptical-corners" class="eliptical-corners_label"></label>
             </div>
-            <div class="allatonce-box" id="allatonce-box">
+            <div class="allatonce-section" id="allatonce-section">
                 <label for="allatonce">Enter a number to change the square:</label>
                 <input type="number" name="allatonce" id="allatonce-input" class="allatonce-input">
+                <input type="button" value="Apply" class="allatonce-button button" id="allatonce-button">
+            </div>
+            <div class="individual-corners-section" id="individual-corners-section">
+                <label for="individual-corners">Enter four different values to change the square:</label>
+                <input type="text" name="individual-corners" id="individual-corners-input" class="individual-corners-input">
+                <input type="button" value="Apply" class="individual-corners-button button" id="individual-corners-button">
+            </div>
+            <div class="eliptical-corners-section" id="eliptical-corners-section">
+                <label for="eliptical-corners">Enter a number to change the square:</label>
+                <input type="number" name="eliptical-corners" id="eliptical-corners-input" class="eliptical-corners-input">
+                <input type="button" value="Apply" class="eliptical-corners-button button" id="eliptical-corners-button">
             </div>
         </section>
         <section class="box-container" id="box-container">
