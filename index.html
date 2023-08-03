@@ -8,26 +8,33 @@
     <title>Border-radius Previewer</title>
 </head>
 <body>
-    <h1 class="page-title" id="page-title">Border-radius Previewer</h1>
-    <main class="main-content" id="main-content">
-        <section class="controls" id="controls">
-            <div class="buttons-box" id="buttons-box">
-                <input type="button" value="All At Once" class="all-at-once button" id="all-at-once">
-                <label for="all-at-once" class="all-at-once_label"></label>
-                <input type="button" value="Individual Corners" class="individuals-corners button" id="individuals-corners">
-                <label for="individuals-corners" class="individuals-corners_label"></label>
-                <input type="button" value="Eliptical Corners" class="eliptical-corners button" id="eliptical-corners">
-                <label for="eliptical-corners" class="eliptical-corners_label"></label>
-            </div>
-            <div class="allatonce-box" id="allatonce-box">
-                <label for="allatonce">Enter a number to change the square:</label>
-                <input type="number" name="allatonce" id="allatonce-input" class="allatonce-input">
-            </div>
-        </section>
-        <section class="box-container" id="box-container">
-            <div class="mutable-box" id="mutable-box"></div>
-        </section>
-    </main>
+    <div class="intro">
+        <h1 class="page-title">Border-Radius Previewer</h1>
+        <hr class="division">
+    </div>
+    <div class="content-container">
+        <div class="input-wrap" id="input-wrap_topleft">
+            <label for="topleft"></label>
+            <input type="text" name="topleft" id="input-topleft" class="input-topleft">
+        </div>
+        <div class="input-wrap" id="input-wrap_topright">
+            <label for="topright"></label>
+            <input type="text" name="topright" id="input-topright" class="input-topright">
+        </div>
+        <div class="emptyleft"></div>
+        <div class="input-wrap" id="input-wrap_bottomright">
+            <label for="bottomright"></label>
+            <input type="text" name="bottomright" id="input-bottomright" class="input-bottomright">
+        </div>
+        <div class="input-wrap" id="input-wrap_bottomleft">
+            <label for="bottomleft"></label>
+            <input type="text" name="bottomleft" id="input-bottomleft" class="input-bottomleft">
+        </div>
+        <div class="mutable-box" id="mutable-box">
+            <p class="border-radius_copy" id="border-radius_copy"></p>
+        </div>
+        <div class="emptyright"></div>
+    </div> 
     <script src="script.js"></script>
 </body>
 </html>
