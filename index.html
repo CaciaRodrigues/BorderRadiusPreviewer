@@ -13,23 +13,17 @@
         <hr class="division">
     </div>
     <div class="content-container">
-        <div class="input-wrap" id="input-wrap_topleft">
-            <label for="topleft"></label>
-            <input type="text" name="topleft" id="input-topleft" class="input-topleft">
-        </div>
-        <div class="input-wrap" id="input-wrap_topright">
-            <label for="topright"></label>
-            <input type="text" name="topright" id="input-topright" class="input-topright">
-        </div>
-        <div class="emptyleft"></div>
-        <div class="input-wrap" id="input-wrap_bottomright">
-            <label for="bottomright"></label>
-            <input type="text" name="bottomright" id="input-bottomright" class="input-bottomright">
-        </div>
-        <div class="input-wrap" id="input-wrap_bottomleft">
-            <label for="bottomleft"></label>
-            <input type="text" name="bottomleft" id="input-bottomleft" class="input-bottomleft">
-        </div>
+        <form class="border-radiusForm" id="border-radiusForm">
+                <label for="topleft">Top Left</label>
+                <input type="text" name="topleft" id="input-TopLeft" class="borderInput TopLeft">
+                <label for="topright">Top Right</label>
+                <input type="text" name="topright" id="input-TopRight" class="borderInput TopRight">
+                <label for="bottomright">Bottom Right</label>
+                <input type="text" name="bottomright" id="input-BottomRight" class="borderInput BottomRight">
+                <label for="bottomleft">Bottom Left</label>
+                <input type="text" name="bottomleft" id="input-BottomLeft" class="borderInput BottomLeft">
+                <input type="submit" value="Add" class="radius-btn" id="radius-btn">
+    </form>
         <div class="mutable-box" id="mutable-box">
             <p class="border-radius_copy" id="border-radius_copy"></p>
         </div>

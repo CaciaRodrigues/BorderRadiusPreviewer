@@ -64,56 +64,57 @@ body {
 
 .content-container {
     grid-area: content;
-    display: grid;
-    grid-template-areas: 
-    'input-tl box input-tr'
-    'emptyleft box emptyright'
-    'input-bl box input-br'
-    ;
-    grid-template-columns: 10% auto 10%;
-    grid-template-rows: 10% auto 10%;
-    flex-direction: column;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 100%;
-    gap: 1rem;
+    gap: 5rem;
 }
 
 .mutable-box {
     width: 400px;
     height: 400px;
     background-color: var(--mid-light-green);
-    grid-area: box;
+    border-radius:0 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--size-medium);
 }
 
-.input-topleft, .input-topright, .input-bottomright, .input-bottomleft, .emptyleft, .emptyright {
-    width: 20px;
-    height: 20px;
+.border-radiusForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--very-dark-green);
+    padding: 2rem;
 }
 
-.input-topleft{
-    grid-area: input-tl;
+.input-wrap {
+    display: grid;
+    grid-template-columns: 40% auto;
+    font-size: var(--size-small);
+    text-align: left;
+    align-items: center;
 }
 
-.input-topright{
-    grid-area: input-tr;
+.borderInput {
+    background-color: var(--white-green);
+    border: 2px solid var(--very-dark-green);
+    border-radius: 5px;
+    height: 100%;
 }
 
-.emptyleft {
-    grid-area: emptyleft;
+.radius-btn {
+    width: 50%;
+    align-self: center;
+    height: 35px;
+    background-color: var(--mid-dark-green);
+    color: var(--white-green);
+    font: var(--main-font);
+    border: 2px solid var(--dark-green);
+    border-radius: 5px;
+    box-shadow: 0 2px 3px var(--black-green), inset 2px 2px 4px var(--dark-green), inset -2px -2px 4px var(--dark-green) ;
+    cursor: pointer;
 }
-
-.input-bottomright{
-    grid-area: input-br;
-}
-
-.input-bottomleft{
-    grid-area: input-bl;
-}
-
-.emptyright {
-    grid-area: emptyright;
-}
-
-
