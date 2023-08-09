@@ -13,19 +13,20 @@
         <hr class="division">
     </div>
     <div class="content-container">
-        <form class="border-radiusForm" id="border-radiusForm">
-                <label for="topleft">Top Left</label>
-                <input type="text" name="topleft" id="input-TopLeft" class="borderInput TopLeft">
-                <label for="topright">Top Right</label>
-                <input type="text" name="topright" id="input-TopRight" class="borderInput TopRight">
-                <label for="bottomright">Bottom Right</label>
-                <input type="text" name="bottomright" id="input-BottomRight" class="borderInput BottomRight">
-                <label for="bottomleft">Bottom Left</label>
-                <input type="text" name="bottomleft" id="input-BottomLeft" class="borderInput BottomLeft">
-                <input type="submit" value="Add" class="radius-btn" id="radius-btn">
-    </form>
+        <div class="border-radiusInput" id="border-radiusInput">
+            <label for="topleft">Top Left</label>
+            <input type="number" name="topleft" id="TopLeft" class="borderInput topLeft" min="0" max="100">
+            <label for="topright">Top Right</label>
+            <input type="number" name="topright" id="TopRight" class="borderInput topRight" min="0" max="100">
+            <label for="bottomright">Bottom Right</label>
+            <input type="number" name="bottomright" id="BottomRight" class="borderInput bottomRight" min="0" max="100">
+            <label for="bottomleft">Bottom Left</label>
+            <input type="number" name="bottomleft" id="BottomLeft" class="borderInput bottomLeft" min="0" max="100">
+            <!-- <input type="submit" value="Add" class="radius-btn" id="radius-btn"> -->
+        </div>
         <div class="mutable-box" id="mutable-box">
-            <p class="border-radius_copy" id="border-radius_copy"></p>
+            <p class="border-radius_copy" id="border-radius_copy">0% 0% 0% 0%</p>
+            <button class="copyBtn" id="copyBtn">Copy</button>
         </div>
         <div class="emptyright"></div>
     </div> 

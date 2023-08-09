@@ -12,7 +12,7 @@
     --black-green:#050805;
     --very-dark-green: #0c140d;
     --dark-green: #111D13 ;
-    --mid-dark-green: #263327;
+    --mid-dark-green: #232c24;
     --mid-light-green: #3d583f;
     --light-green: #688d6d;
     --very-light-green: #88af8f;
@@ -75,38 +75,63 @@ body {
 .mutable-box {
     width: 400px;
     height: 400px;
-    background-color: var(--mid-light-green);
-    border-radius:0 0 0 0;
+    background-color: var(--mid-dark-green);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    row-gap: 1.5rem;
     font-size: var(--size-medium);
 }
 
-.border-radiusForm {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    background-color: var(--very-dark-green);
-    padding: 2rem;
+.copyBtn {
+    cursor: pointer;
+    background-color: var(--dark-green);
+    color: var(--white-green);
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: var(--size-standard);
+    padding: .5rem 1rem;
+    border: 1px solid var(--black-green);
+    border-radius: 3px;
+    box-shadow: 0 3px 4px var(--black-green), inset 3px 3px 4px var(--very-dark-green), inset -3px -3px 4px var(--very-dark-green);
 }
 
-.input-wrap {
+.copyBtn, .border-radius_copy {
+    display: none;
+}
+
+.border-radiusInput {
+    width: 15%;
+    height: 64%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--very-dark-green);
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+/* .input-wrap {
     display: grid;
     grid-template-columns: 40% auto;
     font-size: var(--size-small);
     text-align: left;
     align-items: center;
-}
+} */
 
 .borderInput {
     background-color: var(--white-green);
-    border: 2px solid var(--very-dark-green);
+    border: 2px solid var(--dark-green);
+    box-shadow: 0 3px 4px var(--black-green);
     border-radius: 5px;
-    height: 100%;
+    height: 1.5rem;
+    width: 80%;
 }
 
-.radius-btn {
+/* .radius-btn {
     width: 50%;
     align-self: center;
     height: 35px;
@@ -117,4 +142,4 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 3px var(--black-green), inset 2px 2px 4px var(--dark-green), inset -2px -2px 4px var(--dark-green) ;
     cursor: pointer;
-}
+} */
