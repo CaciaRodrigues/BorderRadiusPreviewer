@@ -1,4 +1,4 @@
-#Border-Radius Previewer
+# Border-Radius Previewer
 
 O objetivo deste projeto é criar uma aplicação na qual o usuário pode manipular os diferentes valores da propriedade border-radius e vizualizar o resultado na tela e ao final poder copiar os valores com "clipboard". 
 As atividades  que serão completadas neste desafio são:
