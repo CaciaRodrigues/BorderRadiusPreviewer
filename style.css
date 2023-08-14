@@ -82,9 +82,10 @@ body {
     align-items: center;
     row-gap: 1.5rem;
     font-size: var(--size-medium);
+    border-radius: 0 0 0 0;
 }
 
-.copyBtn {
+.copy-button {
     cursor: pointer;
     background-color: var(--dark-green);
     color: var(--white-green);
@@ -97,49 +98,38 @@ body {
     box-shadow: 0 3px 4px var(--black-green), inset 3px 3px 4px var(--very-dark-green), inset -3px -3px 4px var(--very-dark-green);
 }
 
-.copyBtn, .border-radius_copy {
+/* .copy-button, .range-box {
     display: none;
-}
+} */
 
-.border-radiusInput {
+.range-box {
     width: 15%;
     height: 64%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     background-color: var(--very-dark-green);
     padding: 2rem;
     border-radius: 5px;
 }
 
-/* .input-wrap {
-    display: grid;
-    grid-template-columns: 40% auto;
-    font-size: var(--size-small);
-    text-align: left;
-    align-items: center;
-} */
-
-.borderInput {
-    background-color: var(--white-green);
-    border: 2px solid var(--dark-green);
-    box-shadow: 0 3px 4px var(--black-green);
-    border-radius: 5px;
-    height: 1.5rem;
-    width: 80%;
+.border-input {
+    appearance: none;
+    background-color: var(--black-green);
+    border: none;
+    box-shadow: 0 2px 3px var(--black-green);
+    border-radius: 3px;
+    height: 2px;
+    width: 90%;
 }
 
-/* .radius-btn {
-    width: 50%;
-    align-self: center;
-    height: 35px;
-    background-color: var(--mid-dark-green);
-    color: var(--white-green);
-    font: var(--main-font);
-    border: 2px solid var(--dark-green);
-    border-radius: 5px;
-    box-shadow: 0 2px 3px var(--black-green), inset 2px 2px 4px var(--dark-green), inset -2px -2px 4px var(--dark-green) ;
+.border-input::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: var(--mid-light-green);
+    border-radius: 50%;
     cursor: pointer;
-} */
+}

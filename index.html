@@ -13,22 +13,21 @@
         <hr class="division">
     </div>
     <div class="content-container">
-        <div class="border-radiusInput" id="border-radiusInput">
+        <div class="range-box">
             <label for="topleft">Top Left</label>
-            <input type="number" name="topleft" id="TopLeft" class="borderInput topLeft" min="0" max="100">
+            <input type="range" name="topleft" id="top-left" class="border-input" min="0" max="100" value="0">
             <label for="topright">Top Right</label>
-            <input type="number" name="topright" id="TopRight" class="borderInput topRight" min="0" max="100">
+            <input type="range" name="topright" id="top-right" class="border-input" min="0" max="100" value="0">
             <label for="bottomright">Bottom Right</label>
-            <input type="number" name="bottomright" id="BottomRight" class="borderInput bottomRight" min="0" max="100">
+            <input type="range" name="bottomright" id="bottom-right" class="border-input" min="0" max="100" value="0">
             <label for="bottomleft">Bottom Left</label>
-            <input type="number" name="bottomleft" id="BottomLeft" class="borderInput bottomLeft" min="0" max="100">
+            <input type="range" name="bottomleft" id="bottom-left" class="border-input" min="0" max="100" value="0">
             <!-- <input type="submit" value="Add" class="radius-btn" id="radius-btn"> -->
         </div>
         <div class="mutable-box" id="mutable-box">
-            <p class="border-radius_copy" id="border-radius_copy">0% 0% 0% 0%</p>
-            <button class="copyBtn" id="copyBtn">Copy</button>
+            <p class="border-radius-copy" id="border-radius-copy"></p>
+            <button class="copy-button" id="copy-button">Copy</button>
         </div>
-        <div class="emptyright"></div>
     </div> 
     <script src="script.js"></script>
 </body>

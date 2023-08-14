@@ -1,13 +1,15 @@
 const box = document.getElementById('mutable-box'); // Caixa de demonstração
-const copyBtn = document.getElementById('copyBtn'); // Botão para copiar para o clipboard
-const brCopy = document.getElementById('border-radius_copy'); // Texto para ser copiado usando clipboard
+const copyBtn = document.getElementById('copy-button'); // Botão para copiar para o clipboard
+const brCopy = document.getElementById('border-radius-copy'); // Texto para ser copiado usando clipboard
 // Criando um array dos elementos de input para poder manipula-los usando map e forEach
 const cornerInputs = [ 
-    {element: document.getElementById('TopLeft'), name: 'TopLeft'},
-    {element: document.getElementById('TopRight'), name: 'TopRight'},
-    {element: document.getElementById('BottomRight'), name: 'BottomRight'},
-    {element: document.getElementById('BottomLeft'), name: 'BottomLeft'},
+    {element: document.getElementById('top-left'), name: 'TopLeft'},
+    {element: document.getElementById('top-right'), name: 'TopRight'},
+    {element: document.getElementById('bottom-right'), name: 'BottomRight'},
+    {element: document.getElementById('bottom-left'), name: 'BottomLeft'},
 ];
+
+brCopy.innerHTML = '0 0 0 0';
 
 //Função para atualizar o propriedade border-radius da caixa e exibir os valores dentro dela
 function updateBorderRadius() {
@@ -15,10 +17,10 @@ function updateBorderRadius() {
     
     box.style.borderRadius = brValues;
 
-    brCopy.style.display = 'block';
+    // brCopy.style.display = 'block';
     brCopy.innerHTML = brValues;
 
-    copyBtn.style.display = 'block';
+    // copyBtn.style.display = 'block';
 }
 
 cornerInputs.forEach(inputData => {
