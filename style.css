@@ -12,13 +12,14 @@
     --black-green:#050805;
     --very-dark-green: #0c140d;
     --dark-green: #111D13 ;
-    --mid-dark-green: #232c24;
+    --mid-dark-green: #1e251f;
     --mid-light-green: #3d583f;
     --light-green: #688d6d;
     --very-light-green: #88af8f;
     --white-green: #E1F1E3;
 }
 
+/*Configurações do Corpo da página */
 body {
     height: 100vh;
     width: 100vw;
@@ -31,14 +32,15 @@ body {
     font-size: var(--size-standard);
     font-family: var(--main-font);
     grid-template-rows: 20% auto;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 100%;
     grid-template-areas: 
-    "title title"
-    "content content"
+    "title"
+    "content"
     ;
     overflow: hidden;
 }
 
+/* Intro da página */
 .intro {
     height: 100%;
     grid-area: title;
@@ -62,57 +64,44 @@ body {
    box-shadow: 0 3px 4px var(--very-dark-green);
 }
 
+/* Conteúdo Principal*/
 .content-container {
+    box-sizing: border-box;
     grid-area: content;
-    display: flex;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-areas: 'input box';
     justify-content: center;
     align-items: center;
-    text-align: center;
     height: 100%;
-    gap: 5rem;
+    width: 100%;
 }
 
-.mutable-box {
-    width: 400px;
-    height: 400px;
-    background-color: var(--mid-dark-green);
+/* Painel de controle */
+.control-panel {
+    box-sizing: border-box;
+    grid-area: input;
+    width: 90%;
+    height: 90%;
+    margin: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 1.5rem;
-    font-size: var(--size-medium);
-    border-radius: 0 0 0 0;
-}
-
-.copy-button {
-    cursor: pointer;
-    background-color: var(--dark-green);
-    color: var(--white-green);
-    font-family: var(--main-font);
-    font-weight: 500;
-    font-size: var(--size-standard);
-    padding: .5rem 1rem;
-    border: 1px solid var(--black-green);
-    border-radius: 3px;
-    box-shadow: 0 3px 4px var(--black-green), inset 3px 3px 4px var(--very-dark-green), inset -3px -3px 4px var(--very-dark-green);
-}
-
-/* .copy-button, .range-box {
-    display: none;
-} */
-
-.range-box {
-    width: 15%;
-    height: 64%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
     background-color: var(--very-dark-green);
     padding: 2rem;
     border-radius: 5px;
+}
+
+/* Controles do border-radius*/
+.range-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
 }
 
 .border-input {
@@ -132,4 +121,110 @@ body {
     background-color: var(--mid-light-green);
     border-radius: 50%;
     cursor: pointer;
+}
+
+/*Controles do tamanho */
+.sizing-input {
+    box-sizing: border-box;
+    width: 90%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'square rectangle';
+    justify-content: center;
+    align-items: center;
+    row-gap: .7rem;
+}
+
+.square-button-box {
+    grid-area: square;
+}
+
+.rectangle-button-box {
+    grid-area: rectangle;
+}
+
+.sizing-input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    width: 100%;
+}
+
+.square-button, .rectangle-button {
+    background-color: var(--mid-light-green);
+    border: 1px solid var(--very-dark-green);
+    color: var(--white-green);
+    font-family: var(--main-font);
+    border-radius: 3px;
+    box-shadow: 0 2px 3px var(--black-green);
+    cursor: pointer;
+}
+
+.square-button {
+    width: 50px;
+    height: 50px;
+}
+
+.rectangle-button {
+    width: 80px;
+    height: 50px;
+}
+
+.shape-dimension {
+    grid-area: min-max;
+    font-size: calc(var(--size-small) - 4px);
+    font-weight: 400;
+    color: var(--light-green);
+    text-align: center;
+}
+
+/* Configurações da Caixa Mutável*/
+.box-container {
+    box-sizing: border-box;
+    grid-area: box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mutable-box {
+    width: 450px;
+    height: 450px;
+    box-sizing: border-box;
+    background-color: var(--mid-dark-green);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5rem;
+    font-size: var(--size-medium);
+    margin-bottom: 1rem;
+    transition: width 0.5s;
+}
+
+.copy-button {
+    cursor: pointer;
+    background-color: var(--dark-green);
+    color: var(--white-green);
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: var(--size-small);
+    padding: .3rem 1rem;
+    border: 1px solid var();
+    border-radius: 3px;
+    box-shadow: 0 3px 4px var(--black-green);
+}
+
+/*Tamanhos diferentes para a caixa*/
+.square-shape {
+    width: 450px;
+    height: 450px;
+}
+
+.rectangle-shape {
+    width: 600px;
+    height: 450px;
 }

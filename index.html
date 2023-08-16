@@ -13,20 +13,38 @@
         <hr class="division">
     </div>
     <div class="content-container">
-        <div class="range-box">
-            <label for="topleft">Top Left</label>
-            <input type="range" name="topleft" id="top-left" class="border-input" min="0" max="100" value="0">
-            <label for="topright">Top Right</label>
-            <input type="range" name="topright" id="top-right" class="border-input" min="0" max="100" value="0">
-            <label for="bottomright">Bottom Right</label>
-            <input type="range" name="bottomright" id="bottom-right" class="border-input" min="0" max="100" value="0">
-            <label for="bottomleft">Bottom Left</label>
-            <input type="range" name="bottomleft" id="bottom-left" class="border-input" min="0" max="100" value="0">
-            <!-- <input type="submit" value="Add" class="radius-btn" id="radius-btn"> -->
+        <div class="control-panel">
+            <div class="range-input">
+                <label for="topleft">Top Left</label>
+                <input type="range" name="topleft" id="top-left" class="border-input" min="0" max="100" value="0">
+                
+                <label for="topright">Top Right</label>
+                <input type="range" name="topright" id="top-right" class="border-input" min="0" max="100" value="0">
+                
+                <label for="bottomright">Bottom Right</label>
+                <input type="range" name="bottomright" id="bottom-right" class="border-input" min="0" max="100" value="0">
+                
+                <label for="bottomleft">Bottom Left</label>
+                <input type="range" name="bottomleft" id="bottom-left" class="border-input" min="0" max="100" value="0">
+            </div>
+            <div class="sizing-input">
+                <div class="sizing-input-box square-button-box">
+                    <span for="widthInput">Square</span>
+                    <button type="button" id="square-button" class="square-button"></button>
+                    <span class="shape-dimension">Width: 450px <br> Heigth: 450px</span>
+                </div>
+                <div class="sizing-input-box rectangle-button-box">
+                    <span class="shape-name">Rectangle</span>
+                    <button id="rectangle-button" class="rectangle-button"></button>
+                    <span class="shape-dimension">Width: 600px <br> Heigth: 450px</span>   
+                </div>
+            </div>
         </div>
-        <div class="mutable-box" id="mutable-box">
-            <p class="border-radius-copy" id="border-radius-copy"></p>
-            <button class="copy-button" id="copy-button">Copy</button>
+        <div class="box-container">
+            <div class="mutable-box" id="mutable-box">
+                <p class="border-radius-copy" id="border-radius-copy"></p>
+                <button class="copy-button" id="copy-button">Copy</button>
+            </div>
         </div>
     </div> 
     <script src="script.js"></script>
