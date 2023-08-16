@@ -38,8 +38,8 @@ cornerInputs.forEach(inputData => {
 copyBtn.addEventListener('click', function() {
     const text = brCopy.textContent;
 
-    navigator.clipboard.writeText(text)
+    navigator.clipboard.writeText(`border-radius: ${text};`)
     .then(() => {
-        alert(`Text copied to clipboard: ${text}`)
+        alert(`Text copied to clipboard: " border-radius: ${text}; "`)
     });
 });
