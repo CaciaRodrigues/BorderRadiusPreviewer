@@ -19,7 +19,7 @@
     --white-green: #E1F1E3;
 }
 
-/*Configurações do Corpo da página */
+/* Corpo da página */
 body {
     height: 100vh;
     width: 100vw;
@@ -42,6 +42,7 @@ body {
 
 /* Intro da página */
 .intro {
+    box-sizing: border-box;
     height: 100%;
     grid-area: title;
     display: flex;
@@ -173,15 +174,19 @@ body {
     height: 50px;
 }
 
-.shape-dimension {
-    grid-area: min-max;
+.shape-dimension-for-1440 {
+    /* grid-area: min-max; */
     font-size: calc(var(--size-small) - 4px);
     font-weight: 400;
     color: var(--light-green);
     text-align: center;
 }
 
-/* Configurações da Caixa Mutável*/
+.shape-dimension-for-1920 {
+    display: none;
+}
+
+/* Caixa Mutável */
 .box-container {
     box-sizing: border-box;
     grid-area: box;
@@ -213,7 +218,7 @@ body {
     font-weight: 500;
     font-size: var(--size-small);
     padding: .3rem 1rem;
-    border: 1px solid var();
+    border: 1px solid var(--very-dark-green);
     border-radius: 3px;
     box-shadow: 0 3px 4px var(--black-green);
 }
@@ -227,4 +232,112 @@ body {
 .rectangle-shape {
     width: 600px;
     height: 450px;
+}
+
+/* Telas 1920x1080 */
+
+@media screen and (min-width: 1920px) {
+    /* Corpo da página */
+    body {
+        grid-template-rows: 25% auto;
+    }
+
+    /* Intro da página */
+    .intro {
+        padding-bottom: 2rem;
+
+    }
+
+    .page-title {
+        font-size: calc(var(--size-big) * 1.7);
+        font-weight: 500;
+        padding-bottom: 2rem;
+    }
+
+    .division {
+        height: 3px;
+        box-shadow: 0 5px 6px var(--very-dark-green);
+    }
+
+    /* Conteúdo Principal*/
+    .content-container {
+        padding: 0 4rem 8rem 4rem  ;
+    }
+
+    /* Painel de controle */
+    .control-panel {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-size: var(--size-medium);
+        font-weight: 500;
+    }
+
+     /* Controles do border-radius*/
+    .range-input {
+        gap: 2rem;
+    }
+
+    .border-input {
+        height: 3px;
+        width: 85%;
+        box-shadow: 0 4px 5px var(--black-green);
+    }
+
+    .border-input::-webkit-slider-thumb {
+        height: 20px;
+        width: 20px;
+    }
+
+    /*Controles do tamanho */
+    .sizing-input-box {
+        row-gap: 1.5rem;
+    }
+
+    .square-button {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .rectangle-button {
+        width: 130px;
+        height: 90px;
+    }
+
+    .shape-dimension-for-1440 {
+        display: none;
+    }
+
+    .shape-dimension-for-1920 {
+        display: block;
+        font-size: var(--size-standard);
+        font-weight: 400;
+        color: var(--light-green);
+        text-align: center;
+    }
+
+    /* Caixa Mutável */
+    .mutable-box {
+        width: 650px;
+        height: 650px;
+        font-size: var(--size-big);
+    }
+
+    .copy-button {
+        font-size: var(--size-medium);
+        padding: 1rem 1.5rem;
+        border-radius: 5px;
+        box-shadow: 0 6px 7px var(--black-green);
+    }
+
+    /* Tamanhos diferentes para a caixa */
+    .square-shape {
+        width: 650px;
+        height: 650px;
+    }
+    
+    .rectangle-shape {
+        width: 950px;
+        height: 650px;
+    }
 }
