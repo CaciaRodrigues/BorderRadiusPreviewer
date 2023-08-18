@@ -76,15 +76,16 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
+    padding: 0 3rem 5rem 3rem;
 }
 
 /* Painel de controle */
 .control-panel {
     box-sizing: border-box;
     grid-area: input;
-    width: 90%;
-    height: 90%;
-    margin: 2rem;
+    width: 100%;
+    height: 450px;
+    /* margin: 2rem; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -134,7 +135,6 @@ body {
     grid-template-areas: 'square rectangle';
     justify-content: center;
     align-items: center;
-    row-gap: .7rem;
 }
 
 .square-button-box {
@@ -174,15 +174,14 @@ body {
     height: 50px;
 }
 
-.shape-dimension-for-1440 {
-    /* grid-area: min-max; */
+.shape-dimension {
     font-size: calc(var(--size-small) - 4px);
     font-weight: 400;
     color: var(--light-green);
     text-align: center;
 }
 
-.shape-dimension-for-1920 {
+.for-1920, .for-450 {
     display: none;
 }
 
@@ -206,7 +205,6 @@ body {
     align-items: center;
     row-gap: 1.5rem;
     font-size: var(--size-medium);
-    margin-bottom: 1rem;
     transition: width 0.5s;
 }
 
@@ -230,7 +228,7 @@ body {
 }
 
 .rectangle-shape {
-    width: 600px;
+    width: 700px;
     height: 450px;
 }
 
@@ -304,16 +302,14 @@ body {
         height: 90px;
     }
 
-    .shape-dimension-for-1440 {
+    .for-1440, .for-450-max {
         display: none;
     }
 
-    .shape-dimension-for-1920 {
+    .for-1920 {
         display: block;
         font-size: var(--size-standard);
         font-weight: 400;
-        color: var(--light-green);
-        text-align: center;
     }
 
     /* Caixa Mutável */
@@ -337,7 +333,125 @@ body {
     }
     
     .rectangle-shape {
-        width: 950px;
+        width: 1000px;
         height: 650px;
     }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 450px) {
+    /* Corpo da Página */
+    body {
+        grid-template-rows: 10% 90%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Intro da página */
+    .intro {
+        border-bottom: 2px solid var(--dark-green);
+        box-shadow: 0 4px 6px var(--very-dark-green);
+        gap: 0;
+    }
+    
+    .page-title {
+        font-size: calc(var(--size-small) * 2);
+        /* margin-bottom: 1rem; */
+        font-weight: 500;
+    }
+
+    .division {
+        display: none;
+    }
+
+    /* Conteúdo Principal*/
+    .content-container {
+        height: 100%;
+        width: 100%;
+        grid-template-areas: 
+            'input'
+            'box'
+            ;
+        grid-template-rows: 40% 60%;
+        grid-template-columns: 1fr;
+        padding: 1.2rem 1.5rem;
+        row-gap: 1rem;
+    }
+
+    /* Painel de controle */
+    .control-panel {
+        height: 100%;
+        gap: 1.7rem;
+        background-color: var(--very-dark-green);
+        padding: 1.5rem;
+        border-radius: 5px;
+    }
+
+    /* Controles do border-radius*/
+    .range-input{
+        display: grid;
+        grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 1.5rem; 
+    }
+
+    .border-input::-webkit-slider-thumb {
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+    }
+
+    /*Controles do tamanho */
+    .sizing-input {
+        width: 100%;
+    }
+
+    .for-1440, .for-1920 {
+        display: none;
+    }
+
+    .for-450 {
+        display: block;
+        font-size: var(--size-small);
+    }
+
+    .square-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .rectangle-button {
+        width: 90px;
+        height: 60px;
+    }
+
+    /* Caixa Mutável */
+    .mutable-box {
+        width: 300px;
+        height: 300px;
+        row-gap: 1.5rem;
+        font-size: calc(var(--size-standard) + 4px);
+    }
+
+    .copy-button {
+        font-size: calc(var(--size-standard) + 4px);
+        padding: .5rem 1rem;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px var(--black-green);
+    }
+
+    /*Tamanhos diferentes para a caixa*/
+    .square-shape {
+        width: 300px;
+        height: 300px;
+    }
+
+    .rectangle-shape {
+        width: 400px;
+        height: 300px;
+    }
+    
 }

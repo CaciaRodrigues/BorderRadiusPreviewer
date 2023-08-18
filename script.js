@@ -40,6 +40,6 @@ copyBtn.addEventListener('click', function() {
 
     navigator.clipboard.writeText(`border-radius: ${text};`)
     .then(() => {
-        alert(`Text copied to clipboard: " border-radius: ${text}; "`)
+        alert(`Text copied to clipboard: " border-radius: ${text}; "`) 
     });
 });
